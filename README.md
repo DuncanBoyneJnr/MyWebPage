@@ -1,2 +1,1 @@
-# https://duncanboynejnr.github.io/
-# MyWebPage
+Just another CV website
