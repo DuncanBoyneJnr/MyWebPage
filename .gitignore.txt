@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Except for "9 - The Blog"
+!9 - The blog/
+!.gitignore
