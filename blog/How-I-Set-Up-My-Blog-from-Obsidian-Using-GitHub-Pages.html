@@ -1,0 +1,130 @@
+<h1 id="how-i-set-up-my-blog-from-obsidian-using-github-pages">How I Set
+Up My Blog from Obsidian Using GitHub Pages</h1>
+<p>Hello everyone! 🎉</p>
+<p>I’ve just set up my personal blog directly from my Obsidian vault
+using GitHub Pages, and now you can too! This guide walks you through
+every step of the process. Whether you’re looking for a simple setup or
+want to use your own custom domain, this guide has you covered.</p>
+<hr />
+<h2 id="step-1-prepare-your-github-repository"><strong>Step 1: Prepare
+Your GitHub Repository</strong></h2>
+<ol type="1">
+<li>Go to <a href="https://github.com/">GitHub</a> and log in.</li>
+<li>Create a new repository for your blog. Name it something like
+<code>MyWebPage</code>.</li>
+<li>Set the repository to public and <strong>DO NOT</strong> initialize
+it with a README, <code>.gitignore</code>, or license (we’ll handle
+these later).</li>
+</ol>
+<hr />
+<h2 id="step-2-prepare-your-blog-folder-in-obsidian"><strong>Step 2:
+Prepare Your Blog Folder in Obsidian</strong></h2>
+<ol type="1">
+<li>In your Obsidian vault, create a new folder to hold your blog
+content. You can name this folder <code>blog</code> or any other name
+you prefer.</li>
+<li>Inside this folder, add a markdown file for your first blog post.
+For example:
+<ul>
+<li><p>File name: <code>My First Blog Post.md</code></p></li>
+<li><p>Content:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;My First Blog Post&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2025-01-02</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span><span class="co"> [blog, personal]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu"># My First Blog Post</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>This is the content of my very first blog post! It’s exciting to start this journey.</span></code></pre></div></li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="step-3-create-the-index.html-file"><strong>Step 3: Create the
+<code>index.html</code> File</strong></h2>
+<ol type="1">
+<li>Inside your <code>blog</code> folder, create a new file named
+<code>index.html</code>.</li>
+<li>Add the following content to this file: html &lt;!DOCTYPE html&gt;
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+My Blog
+</title>
+</head>
+<body>
+<h1>
+Welcome to My Blog
+</h1>
+<ul>
+<li>
+<a href="My%20First%20Blog%20Post.md">My First Blog Post</a>
+</li>
+</ul>
+</body>
+</html></li>
+</ol>
+<hr />
+<h1 id="step-4-create-a-.gitignore-file">Step 4: Create a
+<code>.gitignore</code> File</h1>
+<ol type="1">
+<li>In the root of your Obsidian vault, create a new file named
+<code>.gitignore</code>.</li>
+<li>Add the following content to the file: .obsidian/ *.log !blog/</li>
+<li>This will exclude Obsidian’s configuration files and logs from being
+uploaded to GitHub, while ensuring the <code>blog</code> folder is
+included.</li>
+</ol>
+<h1 id="step-5-initialize-the-git-repository">Step 5: Initialize the Git
+Repository</h1>
+<ol type="1">
+<li>Open your terminal (Git Bash or Command Prompt) and navigate to your
+Obsidian vault folder: cd “path/to/your/vault”</li>
+<li>Initialize a Git repository git init</li>
+<li>Add the blog folder and <code>.gitignore</code> file: git add blog/
+git add .gitignore</li>
+<li>Commit your changes: git commit -m “Initial commit for blog”</li>
+</ol>
+<hr />
+<h1 id="step-6-link-the-repository-to-github">Step 6: Link the
+Repository to GitHub</h1>
+<ol type="1">
+<li>Link your local repository to the GitHub repository you created
+earlier: git remote add origin
+https://github.com/YOUR-USERNAME/MyWebPage.git</li>
+<li>Push your changes to GitHub: git push -u origin main</li>
+</ol>
+<hr />
+<h1 id="step-7-enable-github-pages">Step 7: Enable GitHub Pages</h1>
+<ol type="1">
+<li><p>On GitHub, navigate to your repository and go to
+<strong>Settings</strong>.</p></li>
+<li><p>Scroll down to the <strong>GitHub Pages</strong>
+section.</p></li>
+<li><p>In the <strong>Source</strong> dropdown, select <code>main</code>
+as the branch and <code>/ (root)</code> as the folder.</p></li>
+<li><p>Save your changes. Your blog will be live at
+<code>https://YOUR-USERNAME.github.io/MyWebPage</code>. # Step 8:
+(Optional) Set Up a Custom Domain</p></li>
+<li><p>In the <strong>GitHub Pages</strong> section of your repository’s
+settings, enter your domain name in the <strong>Custom domain</strong>
+field (e.g., <code>www.example.com</code>).</p></li>
+<li><p>Add a <code>CNAME</code> file to the root of your repository:
+echo “www.example.com” &gt; CNAME git add CNAME git commit -m “Add CNAME
+for custom domain” git push origin main</p></li>
+<li><p>Update the DNS settings of your domain to point to GitHub Pages.
+Add the following CNAME record:</p>
+<ul>
+<li>Host: <code>www</code></li>
+<li>Points to: <code>YOUR-USERNAME.github.io</code></li>
+</ul></li>
+</ol>
+<h1 id="congratulations">Congratulations!</h1>
+<p>Your blog is now live and ready to go.</p>
+<p>You can add new blog posts by creating markdown files in your blog
+folder and linking them in the <code>index.html</code> file.</p>
+<p>If you set up a custom domain, your blog will be accessible at your
+domain name. Happy blogging!</p>
