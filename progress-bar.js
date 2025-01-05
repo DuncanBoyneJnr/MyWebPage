@@ -106,7 +106,7 @@ class ProgressBar {
    * @param {number} age to set; defaults to calculateAge()
    */
   setLevel(age = this.calculateAge()) {
-    this.bar.title = `Level ${age} Data Lead`;
+    this.bar.title = `Level ${age} Functional Consultant`;
   }
 
   /**
