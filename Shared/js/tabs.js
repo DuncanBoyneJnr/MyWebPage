@@ -272,9 +272,18 @@ class TabComponent {
    * 
    * @param {MouseEvent} event coming from the clicked tab
    */
-  openClicked(event) {
-    this.openTab(this.tabs.findIndex(tab => tab.innerText === event.target.innerText));
-  }
+openClicked(event) {
+    const clickedTab = this.tabs.findIndex(tab => tab.innerText === event.target.innerText);
+
+    // Redirect if "Blog" is clicked
+    if (event.target.innerText.toLowerCase() === "blog") {
+        window.location.href = '/blog/';
+        return;
+    }
+
+    this.openTab(clickedTab);
+}
+
 
   /**
    * @private

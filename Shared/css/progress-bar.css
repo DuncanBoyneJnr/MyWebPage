@@ -36,13 +36,17 @@ header.card {
     transition: width 0.5s ease-in-out;
 }
 
-#progress-bar > #percent-hint {
+#progress-bar #percent-hint {
     position: absolute;
-    right: 5px;
-    top: 4px;
-    font-size: 0.6rem;
-    color: var(--hint-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--text-color);
+    white-space: nowrap;
 }
+
 
 /* Tab Bar */
 #tab-bar {
@@ -55,12 +59,19 @@ header.card {
 .tab {
     padding: 0.5rem 1rem;
     background-color: var(--element-background);
-    border-radius: 5px;
     border: 1px solid var(--line-color);
+    border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tab:hover {
+    background-color: var(--primary-hover-color);
 }
 
 .tab[aria-selected="true"] {
     background-color: var(--primary-color);
     color: var(--text-color);
+    font-weight: bold;
 }
