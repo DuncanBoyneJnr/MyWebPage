@@ -352,3 +352,31 @@ openClicked(event) {
     return index < 0 || index >= this.tabs.length;
   }
 }
+#tab-bar {
+  display: grid; /* Switch to grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+  gap: 1rem; /* Add space between buttons */
+  justify-content: center; /* Center the grid */
+  max-width: 500px; /* Optional: Restrict overall width */
+  margin: 1rem auto; /* Center the tab bar within its container */
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background-color: var(--element-background);
+  border: 1px solid var(--line-color);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: var(--primary-hover-color);
+  color: var(--text-color);
+}
+
+.tab[aria-selected="true"] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
