@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
+    <!-- Link stylesheets -->
+  <link rel="stylesheet" href="Shared/css/variables.css" />
+  <link rel="stylesheet" href="Shared/css/cv.css" />
+  <link rel="stylesheet" href="Shared/css/progress-bar.css" />
+  <link rel="stylesheet" href="Shared/css/tabs.css" />
+  <link rel="stylesheet" href="Shared/css/card.css" />
+  <link rel="stylesheet" href="Shared/css/animations.css" />
+<script src="/Shared/js/dark-mode.js" defer></script>
+<script src="/Shared/js/progress-bar.js" async></script>
+<script src="/Shared/js/tabs.js" async></script>
+<script src="/Shared/js/cv.js" async></script>
+<script src="/Shared/js/easter-eggs.js" async></script>
 </head>
 <body>
-    <h1>Welcome to My Blog</h1>
-    <ul>
-        <li><a href="How-I-Set-Up-My-Blog-from-Obsidian-Using-GitHub-Pages.html">How I Set Up My Blog from Obsidian Using GitHub Pages</a></li>
-
-    </ul>
+    <header class="card">
+        <h1 class="my-name">Duncan Boyne</h1>
+        <svg id="dark-mode-toggle" class="not-printed" role="img" aria-labelledby="dark-mode-title dark-mode-desc">
+            <title id="dark-mode-title">Toggle dark mode</title>
+            <desc id="dark-mode-desc">Click to toggle dark mode</desc>
+            <path class="st0" d="..."></path> <!-- Use the same SVG as your main site -->
+        </svg>
+    </header>
+    <main class="content">
+        <div class="card">
+            <header>
+                <h2 class="card-title">Welcome to My Blog</h2>
+            </header>
+            <div class="card-content">
+                <ul>
+                    <li><a href="How-I-Set-Up-My-Blog-from-Obsidian-Using-GitHub-Pages.html">How I Set Up My Blog from Obsidian Using GitHub Pages</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="card">
+        <p>&copy; 2025 Duncan Boyne. All rights reserved.</p>
+        <p><a href="https://www.duncanboyne.co.uk/">Home</a> | <a href="https://github.com/DuncanBoyneJnr">GitHub</a> | <a href="https://www.linkedin.com/in/duncanboyne/">LinkedIn</a></p>
+    </footer>
 </body>
 </html>
