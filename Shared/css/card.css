@@ -42,3 +42,22 @@
 .card-content > h4:first-child {
   margin-top: var(--spacing-small);
 }
+
+/* Home Button Styles */
+.home-button {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  box-shadow: var(--mat-shadow);
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--background);
+}
