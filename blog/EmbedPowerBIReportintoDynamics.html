@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Power BI Report into Dynamics</title>
+</head>
+<body>
+    <h1>How to Embed a Power BI Report into Dynamics</h1>
+    
+    <h2>Step 1: Get Your Power BI Report Ready</h2>
+    <ol>
+        <li>Make sure your report is <strong>published to a Power BI workspace</strong> that’s linked to your Dynamics environment.</li>
+        <li>Copy the <strong>Report ID</strong> and <strong>Workspace ID</strong>:
+            <ul>
+                <li>Open your report in Power BI.</li>
+                <li>Look at the URL in your browser. You’ll see something like this:
+                    <pre>https://app.powerbi.com/groups/WorkspaceID/reports/ReportID</pre>
+                </li>
+                <li>Note down the <strong>Workspace ID</strong> and <strong>Report ID</strong>.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Step 2: Add the Power BI Report to Dynamics</h2>
+    <ol>
+        <li><strong>Go to Dynamics</strong>:
+            <ul>
+                <li>Log into Dynamics and navigate to the area where you want the report to appear.</li>
+            </ul>
+        </li>
+        <li><strong>Edit the Form</strong>:
+            <ul>
+                <li>Go to the specific table (e.g., “Accounts” or “Opportunities”).</li>
+                <li>Click <strong>Settings</strong> &gt; <strong>Advanced Settings</strong> &gt; <strong>Customization</strong> &gt; <strong>Customize the System</strong>.</li>
+                <li>Find and open the form where you want the report embedded.</li>
+            </ul>
+        </li>
+        <li><strong>Add an IFRAME for Power BI</strong>:
+            <ul>
+                <li>In the form editor, click <strong>Insert</strong> &gt; <strong>IFRAME</strong>.</li>
+                <li>Name the IFRAME (e.g., <code>PowerBI_Report</code>).</li>
+                <li>Use this URL format for the IFRAME source:
+                    <pre>https://app.powerbi.com/reportEmbed?reportId=&lt;ReportID&gt;&amp;groupId=&lt;WorkspaceID&gt;</pre>
+                </li>
+                <li>Replace <code>&lt;ReportID&gt;</code> and <code>&lt;WorkspaceID&gt;</code> with the ones you noted earlier.</li>
+                <li><strong>Check the boxes</strong> for "Pass record object-type code and unique identifier as parameters" (if needed).</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Step 3: Set Permissions</h2>
+    <ol>
+        <li><strong>Ensure User Access</strong>:
+            <ul>
+                <li>Users need <strong>Power BI licenses</strong> to view the embedded report.</li>
+                <li>Make sure they have access to the workspace in Power BI.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Step 4: Test and Publish</h2>
+    <ol>
+        <li>Save and <strong>Publish the Form</strong>.</li>
+        <li>Go to Dynamics, navigate to the form, and check if the report appears as expected.</li>
+    </ol>
+
+    <p>Embedding Power BI reports into Dynamics is now simpler than ever! Let me know if you have any questions or face issues while following these steps.</p>
+</body>
+</html>
